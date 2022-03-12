@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose')
 const router = express.Router();
-const UserModel = require('../models/UserModel.js'); //please confirm input to your dir
+const UserModel = require('../modules/UserModel.js'); //please confirm input to your dir
 const cloudinary = require('cloudinary').v2;
 
 //I'm not too confident in the backend so please confirm this works with the server.js thank you :)
