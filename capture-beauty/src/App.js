@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Login';
 import Profile from './Profile';
+import Forgot from './Forgot';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>  
         <Route path="/" exact="true" element={<Login/>} />
         <Route path="/profile" exact="true" element={<Profile/>} />
+        <Route path="/forgot" exact="true" element={<Forgot/>} />
       </Routes>
     </BrowserRouter>
   );
