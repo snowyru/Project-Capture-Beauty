@@ -7,7 +7,7 @@ function LayoutRoute(props) {
     return (
         <>
             <NavBar {...props} />
-                <Route path={props.path} exact={props.exact} component={props.component} />
+                <Route path={props.path} exact={props.exact} element={<props.element/>} />
             <Footer {...props} />
         </>
     )
