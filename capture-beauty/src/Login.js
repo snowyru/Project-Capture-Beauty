@@ -13,6 +13,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { FormControl } from '@mui/material';
+import InputLabel from '@mui/material/InputLabel';
+import Input from '@mui/material/input';
+import { FormHelperText } from '@mui/material';
 
 function Login() {
 
@@ -28,6 +32,10 @@ function Login() {
           password: data.get('password'),
         });
       };
+
+    const handleChange = (event) => {
+        
+    };
 
     return(
         <>
@@ -54,6 +62,16 @@ function Login() {
                             </Typography>
                                 {/* Text box for email input */}
                                 <Box component="form" onSubmit={handleLogin} noValidate sx={{ mt: 1 }}>
+                                        <FormControl error variant="standard">
+                                            <InputLabel htmlFor="component-error">Name</InputLabel>
+                                            <Input
+                                            id="component-error"
+                                            
+                                            onChange={handleChange}
+                                            aria-describedby="component-error-text"
+                                            />
+                                            <FormHelperText id="component-error-text">Error</FormHelperText>
+                                        </FormControl>
                                     <TextField
                                     margin="normal"
                                     required
@@ -91,12 +109,12 @@ function Login() {
                                                     {/* Forgot password or register links */}
                                                     <Grid container>
                                                         <Grid item xs>
-                                                            <Link href="#" variant="body2">
+                                                            <Link to="/forgot" variant="body2">
                                                             Forgot password?
                                                             </Link>
                                                         </Grid>
                                                             <Grid item>
-                                                                <Link href="#" variant="body2">
+                                                                <Link to="/Resgister" variant="body2">
                                                                 {"Don't have an account? Register now!"}
                                                                 </Link>
                                                             </Grid>
