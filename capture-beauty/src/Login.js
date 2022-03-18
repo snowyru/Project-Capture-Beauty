@@ -23,20 +23,21 @@ function Login() {
         //currently primary is blue, secondary is purple
 
     // Validation code
-    let validEmail = true;
+    const [valid, setValid] = React.useState(true);
     function ValidateEmail(inputText){
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if(inputText.match(mailformat))
         {
         console.log("Valid email address!");
-        return validEmail = true;
+        setValid(true);
         }
         else
         {
         console.log("You have entered an invalid email address!");
-        return validEmail = false;
+        setValid(false);
         }
     }
+
     const valueRef = useRef('') //create ref for email
     const handleChange = () => {
         ValidateEmail(valueRef.current.value);
@@ -89,8 +90,14 @@ function Login() {
                                     name="email"
                                     autoComplete="email"
                                     autoFocus
-                                    />
-                                        <FormHelperText error variant="standard" id="component-error-text">Please enter a valid email address!</FormHelperText>
+                                    />  
+                                        {/* alert for user if email is valid */}                           
+                                       {valid === false &&
+                                        <FormHelperText error variant="standard" id="component-error-text">
+                                            Please enter a valid email address!
+                                        </FormHelperText>
+                                        }    
+
                                     {/* Text box for password input */}
                                     <TextField
                                     margin="normal"
