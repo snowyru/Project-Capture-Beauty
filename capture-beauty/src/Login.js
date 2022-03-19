@@ -109,7 +109,7 @@ function Login() {
             });
        
         } else {
-            setState("validatoin error")
+            setState("validation error")
             console.log('Input valid email') //also triggered a message for an invalid email earlier
         }
       };
