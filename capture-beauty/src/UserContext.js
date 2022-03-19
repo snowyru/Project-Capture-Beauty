@@ -48,7 +48,7 @@ export function UserContextProvider(props) {
     const setUserState = useCallback(
         function(payload) {
 
-
+            console.log(payload);
 
             // If user logs in
             if (payload.loginStatus === true) {
