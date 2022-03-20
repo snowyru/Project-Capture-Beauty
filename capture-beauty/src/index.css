@@ -40,7 +40,7 @@ code {
   .pcontainer:hover .avatar-flip img:last-child {
     opacity: 1;
   }
-  .pavatar-flip {
+  .avatar-flip {
     border-radius: 100px;
     overflow: hidden;
     height: 150px;
@@ -55,7 +55,7 @@ code {
     -webkit-box-shadow: 0 0 0 13px #c9dfec;
     -moz-box-shadow: 0 0 0 13px #f0f0f0;
   }
-  .pavatar-flip img {
+  .avatar-flip img {
     position: absolute;
     left: 0;
     top: 0;
@@ -64,10 +64,10 @@ code {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
   }
-  .pavatar-flip img:first-child {
+  .avatar-flip img:first-child {
     z-index: 1;
   }
-  .pavatar-flip img:last-child {
+  .avatar-flip img:last-child {
     z-index: 0;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);

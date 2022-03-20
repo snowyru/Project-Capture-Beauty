@@ -4,6 +4,7 @@ import Login from './Login';
 import Profile from './Profile';
 import Forgot from './Forgot';
 import HomeScreen from './HomeScreen';
+import ProfileSettings from './ProfileSettings';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/home" exact="true" element={<HomeScreen/>} />
         <Route path="/profile" exact="true" element={<Profile/>} />
         <Route path="/forgot" exact="true" element={<Forgot/>} />
+        <Route path="/profilesettings" exact="true" element={<ProfileSettings/>} />
       </Routes>
     </BrowserRouter>
   );
