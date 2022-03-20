@@ -14,7 +14,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ pictures }) {
   return (
     <Card sx={{ maxWidth: 345 }} style={{width:'100%'}}>
       <CardHeader
@@ -25,25 +25,25 @@ export default function ProductCard({ product }) {
           </IconButton>
         }
         title="User Name"
-        subheader={product.dateCreated.substring(0, 10)}
+        subheader={pictures.dateCreated.substring(0, 10)}
       />
       <CardMedia
         component="img"
         height="194"
-        image={product.image}
-        alt={product.name}
+        image={pictures.image}
+        alt={pictures.name}
       />
       <CardContent>
       <Typography variant="body2" color="text.secondary">
           Name : 
-          {product.name}
+          {pictures.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Category : 
-          {product.category}
+          {pictures.category}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Description : {product.description}
+          Description : {pictures.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
